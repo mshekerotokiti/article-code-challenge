@@ -1,0 +1,1 @@
+We have three models: Author, Article, and Magazine.
