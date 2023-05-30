@@ -5,6 +5,7 @@ class Author
       @name = name
     end
   
+    # ORM
     def articles
       Article.all.select{|article| article.author.name == self.name}
     end
@@ -14,7 +15,8 @@ class Author
       all_magazines.uniq
     end
   
-    def new_article(magazine, title)
+    #Associations and Aggregate methods
+    def add_article(magazine, title)
       Article.new(self, magazine, title)
     end
   

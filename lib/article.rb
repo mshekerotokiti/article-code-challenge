@@ -12,7 +12,8 @@ class Article
       def self.all
         @@all
       end
-    
+      
+    #ORM
       def author
         @author
       end 

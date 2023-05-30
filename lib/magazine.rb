@@ -5,7 +5,6 @@ class Magazine
     def initialize(name, category)
       @name = name
       @category = category
-      #put new instance into an array
       @@all << self
     end
   
@@ -21,9 +20,9 @@ class Magazine
       magazine_articles.collect{|article| article.author}.uniq
     end
   
-    def self.get_by_name(name)
-      get_magazines = self.all.select { |magazine| magazine.name == name}
-      get_magazines.first
+    def self.find_by_name(name)
+      find_magazines = self.all.select { |magazine| magazine.name == name}
+      find_magazines.first
     end
   
     def article_titles
